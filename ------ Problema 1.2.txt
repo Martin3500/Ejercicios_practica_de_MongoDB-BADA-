@@ -1,0 +1,31 @@
+------ Problema 1.2 ------
+
+1. Crear una base de datos llamada "blog".
+
+use blog
+
+2. Agregar una colección llamada "posts" e insertar 1 documento con
+una estructura a su elección.
+
+db.posts.insertOne({
+  titulo: "Mi primer post",
+  contenido: "Introducción al desarrollo con bases de datos NoSQL.",
+  autor: "Pepito",
+  fecha: new Date(),
+  etiquetas: ["mongodb", "nosql", "tutorial"]
+})
+
+3. Mostrar todas las bases de datos actuales.
+
+show dbs
+
+4. Eliminar la colección "posts"
+
+db.posts.drop()
+
+5. Eliminar la base de datos "blog" y mostrar las bases de datos
+existentes.
+
+db.dropDatabase()
+
+show dbs
