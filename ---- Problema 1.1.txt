@@ -1,0 +1,24 @@
+---- Problema 1.1 
+
+--Respuestas
+
+1. Insertar 2 documentos en la colección clientes con '_id' no repetidos
+
+db.clientes.insertMany([
+  { _id: 1, nombre: "Carlos Gómez", email: "carlos@example.com" },
+  { _id: 2, nombre: "Ana Martínez", email: "ana@example.com" }
+]);
+
+2. Intentar insertar otro documento con clave repetida.
+
+db.clientes.insertOne({
+  _id: 1, 
+  nombre: "Luis Rodríguez", 
+  email: "luis@example.com"
+});
+
+salta error de E11000 duplicate key error por que el valor de _id esta repetida
+
+3. Mostrar todos los documentos de la colección clientes
+
+db.clientes.find();
